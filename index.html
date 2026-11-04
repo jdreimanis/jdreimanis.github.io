@@ -1,404 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jason Dreimanis</title>
-  <meta name="description" content="Jason Dreimanis. Adelaide. APAC Platform Lead, Digital Services at ERM. Chair, AIIA SA/NT Council.">
+  <title>Jason Dreimanis | Commercial Growth &amp; Business Leader</title>
+  <meta name="description" content="Jason Dreimanis, Adelaide. Commercial growth and business leader. Chair, AIIA SA/NT Council. Full CV available on request.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#c00000" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161617" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://jdreimanis.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jason Dreimanis">
+  <meta property="og:title" content="Jason Dreimanis | Commercial Growth &amp; Business Leader">
+  <meta property="og:description" content="Commercial growth and partnerships leader. Chair, AIIA SA/NT Council. Adelaide.">
+  <meta property="og:url" content="https://jdreimanis.github.io/">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jason Dreimanis | Commercial Growth &amp; Business Leader">
+  <meta name="twitter:description" content="Commercial growth and partnerships leader. Chair, AIIA SA/NT Council. Adelaide.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c00000'/%3E%3Ctext x='32' y='45' font-size='34' font-family='Arial Narrow,Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@360;420;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink: #f4f1ea;
-      --muted: #b8b3a8;
-      --dim: #8c877c;
-      --line: rgba(244,241,234,.12);
-      --glass: rgba(12,14,18,.55);
-      --glass-2: rgba(18,20,26,.72);
-      --accent: #e2b56a;
-      --accent-2: #8fd0c8;
-      --danger: #c9a06a;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Outfit, system-ui, sans-serif;
-      color: var(--ink);
-      background: #07080b url("bg-adelaide.png") center / cover fixed no-repeat;
-      line-height: 1.55;
-      font-size: 1.05rem;
-      font-weight: 360;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(1200px 700px at 15% -10%, rgba(226,181,106,.16), transparent 55%),
-        radial-gradient(900px 600px at 90% 10%, rgba(143,208,200,.1), transparent 50%),
-        linear-gradient(180deg, rgba(7,8,11,.55) 0%, rgba(7,8,11,.78) 38%, rgba(7,8,11,.9) 100%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .grain {
-      position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .22;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>");
-    }
-    .wrap { position: relative; z-index: 2; }
-    nav {
-      position: sticky; top: 0; z-index: 20;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem; padding: .85rem 6vw;
-      background: rgba(7,8,11,.42);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line);
-    }
-    .brand {
-      font-weight: 500; letter-spacing: .02em; text-decoration: none; color: var(--ink);
-    }
-    .nav-links { display: flex; gap: .4rem; flex-wrap: wrap; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none; font-size: .86rem;
-      padding: .4rem .85rem; border-radius: 999px; border: 1px solid transparent;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--ink); border-color: var(--line); background: rgba(255,255,255,.05);
-    }
-    main { padding: 0 6vw 6rem; max-width: 1180px; margin: 0 auto; }
-    .hero { min-height: 88vh; display: grid; align-content: end; padding: 8rem 0 4.5rem; }
-    .kicker {
-      color: var(--accent); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
-      font-weight: 500; margin-bottom: 1.1rem;
-    }
-    h1 {
-      font-family: "Instrument Serif", Georgia, serif;
-      font-weight: 400; font-size: clamp(3.2rem, 8vw, 6.4rem);
-      line-height: .95; letter-spacing: -.03em;
-    }
-    .lede {
-      margin-top: 1.4rem; max-width: 36rem; font-size: 1.18rem; color: var(--muted);
-    }
-    .actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 2rem; }
-    .btn {
-      display: inline-flex; align-items: center; gap: .45rem;
-      text-decoration: none; border: 0; cursor: pointer; font: inherit;
-      padding: .8rem 1.15rem; border-radius: 999px; transition: transform .2s, background .2s, border-color .2s;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--ink); color: #111; font-weight: 500; }
-    .btn-ghost {
-      background: transparent; color: var(--ink);
-      border: 1px solid var(--line);
-    }
-    .btn-ghost:hover { background: rgba(255,255,255,.06); }
-    .scroll-hint {
-      margin-top: 4.5rem; color: var(--dim); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
-    }
-    section { padding: 4.5rem 0 1rem; }
-    h2 {
-      font-family: "Instrument Serif", Georgia, serif;
-      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1.6rem;
-    }
-    .work-grid {
-      display: grid; gap: 1rem;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 800px) {
-      .work-grid { grid-template-columns: 1.4fr 1fr; }
-      .card.featured { grid-row: span 2; min-height: 28rem; }
-    }
-    .card {
-      background: var(--glass);
-      border: 1px solid var(--line);
-      border-radius: 1.35rem;
-      padding: 1.4rem 1.45rem 1.3rem;
-      backdrop-filter: blur(18px);
-      display: flex; flex-direction: column; gap: .7rem;
-      text-align: left; color: inherit; cursor: pointer;
-      transition: transform .2s, border-color .2s, background .2s;
-    }
-    .card:hover { transform: translateY(-3px); border-color: rgba(226,181,106,.35); background: var(--glass-2); }
-    .card .meta { color: var(--accent-2); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 500; }
-    .card h3 { font-size: 1.35rem; font-weight: 500; letter-spacing: -.02em; }
-    .card p { color: var(--muted); }
-    .card.featured { justify-content: flex-end; }
-    .pull { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(1.35rem, 2.4vw, 1.85rem); line-height: 1.25; color: var(--ink); margin: 1.2rem 0 1.6rem; font-style: italic; max-width: 22ch; }
-    .card .row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
-    .chip {
-      font-size: .78rem; color: var(--ink); border: 1px solid var(--line);
-      border-radius: 999px; padding: .35rem .7rem; background: rgba(255,255,255,.04);
-      text-decoration: none; display: inline-flex;
-    }
-    a.chip:hover { border-color: rgba(226,181,106,.5); }
-    .path { display: grid; gap: .6rem; }
-    .job {
-      width: 100%; text-align: left; color: inherit; background: transparent;
-      border: 1px solid var(--line); border-radius: 1.1rem; padding: 1rem 1.15rem;
-      cursor: pointer; backdrop-filter: blur(12px); background: rgba(10,12,16,.35);
-    }
-    .job:hover, .job.open { background: rgba(18,20,26,.65); border-color: rgba(255,255,255,.18); }
-    .job-top { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .job strong { font-weight: 500; }
-    .when { color: var(--dim); font-size: .88rem; }
-    .job .detail { display: none; color: var(--muted); margin-top: .7rem; max-width: 46rem; }
-    .job.open .detail { display: block; }
-    .about {
-      display: grid; gap: 1.4rem;
-    }
-    @media (min-width: 800px) { .about { grid-template-columns: 1.2fr .8fr; align-items: start; } }
-    .values { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
-    footer {
-      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-      padding: 3rem 0 1rem; color: var(--dim); font-size: .9rem; border-top: 1px solid var(--line); margin-top: 3rem;
-    }
-    .drawer-back {
-      position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 40;
-      opacity: 0; pointer-events: none; transition: opacity .2s;
-    }
-    .drawer-back.show { opacity: 1; pointer-events: auto; }
-    .drawer {
-      position: fixed; right: 0; top: 0; height: 100%; width: min(34rem, 100%);
-      background: #101318; z-index: 41; transform: translateX(100%);
-      transition: transform .28s ease; padding: 2rem 1.6rem; overflow: auto;
-      border-left: 1px solid var(--line);
-    }
-    .drawer.show { transform: translateX(0); }
-    .drawer h3 { font-family: "Instrument Serif", Georgia, serif; font-size: 2rem; font-weight: 400; margin: .4rem 0 1rem; }
-    .drawer p { color: var(--muted); margin-bottom: 1rem; }
-    .close {
-      background: transparent; border: 1px solid var(--line); color: var(--ink);
-      border-radius: 999px; padding: .4rem .8rem; cursor: pointer; font: inherit;
-    }
-    @media (max-width: 700px) {
-      nav { padding: .75rem 1.1rem; }
-      main { padding: 0 1.1rem 4rem; }
-      .hero { padding-top: 5.5rem; min-height: 78vh; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Jason Dreimanis","url":"https://jdreimanis.github.io/","jobTitle":"Commercial Growth & Business Leader","address":{"@type":"PostalAddress","addressLocality":"Adelaide","addressRegion":"SA","addressCountry":"AU"},"sameAs":["https://www.linkedin.com/in/jasondreimanis"]}
+  </script>
 </head>
 <body>
-  <div class="grain"></div>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="#top">Jason Dreimanis</a>
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#path">Path</a>
-        <a href="#about">About</a>
-        <a class="btn-ghost btn" style="padding:.35rem .9rem" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </nav>
-    <main id="top">
-      <header class="hero">
-        <p class="kicker">Adelaide · ERM · AIIA SA/NT Chair</p>
-        <h1>Jason<br>Dreimanis</h1>
-        <p class="lede">APAC Platform Lead for Digital Services at ERM. Chair of the AIIA SA/NT Council. Two decades connecting technology, public sector, and industry.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#work">See the work</a>
-          <a class="btn btn-ghost" href="https://aiia.com.au/wp-content/uploads/2026/02/South-Australian-AI-Strategy-Subsmission.pdf" target="_blank" rel="noopener">SA AI strategy submission</a>
-        </div>
-        <p class="scroll-hint">Scroll</p>
-      </header>
+<a class="skip" href="#main">Skip to content</a>
 
-      <section id="work">
-        <h2>Work in public</h2>
-        <div class="work-grid">
-          <article class="card featured" data-panel="ai">
-            <p class="meta">Policy · February 2026</p>
-            <blockquote class="pull">“AI is no longer just a technology issue, it’s productivity infrastructure.”</blockquote>
-            <h3>South Australian AI Strategy submission</h3>
-            <p>AIIA’s living-strategy brief to SA Government. Jobs, trusted public services, and domestic capability, with industry in the room.</p>
-            <div class="row">
-              <a class="chip" href="https://aiia.com.au/wp-content/uploads/2026/02/South-Australian-AI-Strategy-Subsmission.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read the PDF</a>
-              <a class="chip" href="https://aiia.com.au/wp-content/uploads/2026/02/South-Australia-AI-Strategy-MR.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Media release</a>
-              <a class="chip" href="https://aiia.com.au/influence-and-leadership/policy-submissions/" target="_blank" rel="noopener" onclick="event.stopPropagation()">AIIA policy</a>
-            </div>
-          </article>
-          <article class="card" data-panel="sundowner">
-            <p class="meta">Event · September 2024</p>
-            <h3>AIML sundowner: AI Is Here</h3>
-            <p>Opening address at the Australian Institute for Machine Learning, Lot Fourteen, for AIIA’s SA sundowner on AI adoption.</p>
-          </article>
-          <article class="card" data-panel="council">
-            <p class="meta">Industry · ongoing</p>
+<nav class="nav" aria-label="Sections">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Jason Dreimanis, top of page"><span>J</span>D</a>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#civic">Civic</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <a class="pill-cta" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">Request my full CV</a>
+  </div>
+</nav>
+
+<header class="band" id="top">
+  <div class="band-inner">
+    <div class="name-block">
+      <h1><span class="first">JASON</span><span class="last">DREIMANIS</span></h1>
+      <p class="tagline">Commercial Growth &amp; Business Leader</p>
+    </div>
+    <div class="band-right">
+      <ul class="contact">
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+          Adelaide, South Australia
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.500-3 3-3s2 1 2 3v4"/></svg>
+          <a href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">linkedin.com/in/jasondreimanis</a>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11.500V16c0 1.500 2.200 3 5 3s5-1.500 5-3v-4.500"/></svg>
+          Chair, AIIA SA/NT Council
+        </li>
+      </ul>
+      <a class="cta" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">Request my full CV</a>
+    </div>
+  </div>
+</header>
+
+<main class="page" id="main">
+
+  <section id="profile" class="reveal" aria-labelledby="h-profile">
+    <h2 class="sec" id="h-profile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.400 3.600-7 8-7s8 2.600 8 7"/></svg>Profile</h2>
+    <p class="profile">Commercial growth and partnerships leader with 20+ years selling and delivering technology to government and regulated clients. Took new offerings from start-up to scale and ran a 40+ person regional P&amp;L.</p>
+  </section>
+
+  <div class="cols">
+    <div class="main-col">
+
+      <section id="career" aria-labelledby="h-career">
+        <h2 class="sec" id="h-career"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1.500"/><path d="M9 7V4.500h6V7M3 13h18"/></svg>Career history</h2>
+        <ol class="timeline">
+          <li class="reveal">
+            <article class="card role">
+              <div class="role-head">
+                <h3>COO, Commercial Director, Global</h3>
+                <span class="place"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>APAC, NA, EMEA</span>
+              </div>
+              <p class="org-line"><span><strong>ERM</strong> (via The Big Zero)</span> <span class="dates">March 2023 &ndash; Present</span></p>
+              <p class="headline">Took a new net zero offering from start-up to the largest Net Zero Cloud provider globally.</p>
+            </article>
+          </li>
+          <li class="reveal">
+            <article class="card role">
+              <div class="role-head">
+                <h3>Chair, SA/NT Council</h3>
+                <span class="place"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>Adelaide</span>
+              </div>
+              <p class="org-line"><span><strong>AIIA</strong> (Australian Information Industry Association)</span> <span class="dates">2022 &ndash; Present</span></p>
+              <p class="headline">Chairs the SA/NT Council of Australia&rsquo;s peak technology industry body, connecting industry, government and universities on digital and AI skills.</p>
+            </article>
+          </li>
+          <li class="reveal">
+            <article class="card role">
+              <div class="role-head">
+                <h3>State Sales Director SA</h3>
+                <span class="place"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>Adelaide</span>
+              </div>
+              <p class="org-line"><span><strong>Salesforce</strong></span> <span class="dates">January 2022 &ndash; February 2023</span></p>
+              <p class="headline">Launched the SA Government net zero MOU and the whole-of-government procurement contract.</p>
+            </article>
+          </li>
+          <li class="reveal">
+            <article class="card role">
+              <div class="role-head">
+                <h3>General Manager SA / NT / WA</h3>
+                <span class="place"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>Adelaide, Darwin, Perth</span>
+              </div>
+              <p class="org-line"><span><strong>DWS</strong> (an HCLTech company)</span> <span class="dates">October 2015 &ndash; January 2022</span></p>
+              <p class="headline">Led regional operations with 40+ direct reports and secured the largest single value contract in DWS corporate history.</p>
+            </article>
+          </li>
+        </ol>
+        <p class="earlier"><strong>Earlier:</strong> leadership roles at TechnologyOne, Esri Australia and EDS.</p>
+      </section>
+
+      <section id="civic" aria-labelledby="h-civic">
+        <h2 class="sec" id="h-civic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v8M9.500 10v8M14.500 10v8M19 10v8M3 20h18"/></svg>Civic &amp; public work</h2>
+        <div class="tiles">
+
+          <article class="card tile featured reveal">
+            <p class="kicker"><span class="badge">Chair</span> Industry</p>
             <h3>AIIA SA/NT Council</h3>
-            <p>Chair. Events, the SA/NT iAwards, and a working relationship with government on the state’s digital agenda.</p>
+            <p>Chair of the local arm of Australia&rsquo;s peak digital industry body: policy, events and the iAwards.</p>
+            <p class="links"><a href="https://aiia.com.au/state-councils/sa-council/" target="_blank" rel="noopener">SA Council<span class="arr" aria-hidden="true"></span></a> <a href="https://aiia.com.au/iawards/" target="_blank" rel="noopener">iAwards<span class="arr" aria-hidden="true"></span></a></p>
           </article>
-          <article class="card" data-panel="tbz-ops">
-            <p class="meta">Webinar · The Big Zero</p>
+
+          <article class="card tile reveal">
+            <p class="kicker">Policy &middot; February 2026</p>
+            <h3>South Australian AI Strategy submission</h3>
+            <p>AIIA&rsquo;s brief to SA Government on jobs, trusted public services and domestic capability.</p>
+            <p class="links"><a href="https://aiia.com.au/wp-content/uploads/2026/02/South-Australian-AI-Strategy-Subsmission.pdf" target="_blank" rel="noopener">Submission (PDF)<span class="arr" aria-hidden="true"></span></a> <a href="https://aiia.com.au/wp-content/uploads/2026/02/South-Australia-AI-Strategy-MR.pdf" target="_blank" rel="noopener">Media release<span class="arr" aria-hidden="true"></span></a> <a href="https://aiia.com.au/influence-and-leadership/policy-submissions/" target="_blank" rel="noopener">AIIA submissions<span class="arr" aria-hidden="true"></span></a></p>
+          </article>
+
+          <article class="card tile reveal">
+            <p class="kicker">Event &middot; September 2024</p>
+            <h3>AI Is Here: AIML sundowner</h3>
+            <p>Opening address at the Australian Institute for Machine Learning on AI adoption for SA business.</p>
+            <p class="links"><a href="https://www.adelaide.edu.au/aiml/events/list/2024/09/australian-information-industry-association-aiia-sa-sundowner-ai-is-here" target="_blank" rel="noopener">AIML write-up<span class="arr" aria-hidden="true"></span></a> <a href="https://aiia.com.au/event/ai-adoption-for-business-sa-sundowner/" target="_blank" rel="noopener">AIIA event page<span class="arr" aria-hidden="true"></span></a></p>
+          </article>
+
+          <article class="card tile reveal">
+            <p class="kicker">Webinar &middot; The Big Zero</p>
             <h3>Sustainability in operations</h3>
-            <p>Hosted while COO of The Big Zero. Systems, funding, and Net Zero Cloud for sustainable operations, with Northmore Gordon.</p>
-            <div class="row">
-              <a class="chip" href="https://youtu.be/v5usQ4VJPlI" target="_blank" rel="noopener" onclick="event.stopPropagation()">Watch on YouTube</a>
-            </div>
+            <p>Hosted while COO of The Big Zero, with a Net Zero Cloud walkthrough.</p>
+            <p class="links"><a href="https://youtu.be/v5usQ4VJPlI" target="_blank" rel="noopener">Watch on YouTube<span class="arr" aria-hidden="true"></span></a></p>
           </article>
-          <article class="card" data-panel="tbz-scope3">
-            <p class="meta">Webinar · The Big Zero</p>
+
+          <article class="card tile reveal">
+            <p class="kicker">Webinar &middot; The Big Zero</p>
             <h3>Emissions Unplugged: Cleaning up your value chain</h3>
-            <p>Hosted Scope 3 webinar with ERM and Salesforce on value-chain emissions, data, and supplier engagement.</p>
-            <div class="row">
-              <a class="chip" href="https://youtu.be/Fd_spWJepVM" target="_blank" rel="noopener" onclick="event.stopPropagation()">Watch on YouTube</a>
-            </div>
+            <p>Hosted Scope 3 webinar with ERM and Salesforce on value-chain emissions.</p>
+            <p class="links"><a href="https://youtu.be/Fd_spWJepVM" target="_blank" rel="noopener">Watch on YouTube<span class="arr" aria-hidden="true"></span></a></p>
           </article>
+
         </div>
+      </section>
+    </div>
+
+    <aside class="side" id="skills" aria-label="Strengths">
+
+      <section class="card panel reveal">
+        <h2 class="side-h">Who am I?</h2>
+        <svg class="donut" viewBox="0 0 360 310" role="img" aria-label="Values: Determined, Engaging, Inclusive, Consultative, Honesty, Integrity, Accountability">
+          <defs>
+            <path id="arc-outer" d="M 89.4 295.0 A 141 141 0 1 1 270.6 295.0"/>
+            <path id="arc-inner" d="M 122.1 255.9 A 90 90 0 1 1 237.9 255.9"/>
+          </defs>
+          <path d="M 83.6 301.9 A 150 150 0 1 1 276.4 301.9" class="ring ring-outer"/>
+          <path d="M 117.6 261.3 A 97 97 0 1 1 242.4 261.3" class="ring ring-inner"/>
+          <text class="ring-text t-outer"><textPath href="#arc-outer" startOffset="50%" text-anchor="middle" word-spacing="14">Determined Engaging Inclusive Consultative</textPath></text>
+          <text class="ring-text t-inner"><textPath href="#arc-inner" startOffset="50%" text-anchor="middle" word-spacing="10">Honesty Integrity Accountability</textPath></text>
+        </svg>
       </section>
 
-      <section id="path">
-        <h2>Path</h2>
-        <div class="path">
-          <button class="job open" type="button">
-            <div class="job-top"><strong>ERM · APAC Platform Lead, Digital Services</strong><span class="when">2024 – now</span></div>
-            <p class="detail">Connecting data and digital platforms with sustainability outcomes across APAC, after ERM acquired The Big Zero in March 2024. Previously COO of The Big Zero from 2023, leading sales and delivery for the startup.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>Salesforce · State Sales Director, SA Public Sector</strong><span class="when">2022 – 2023</span></div>
-            <p class="detail">Public sector sales leadership in South Australia, before moving into The Big Group / ERM sustainability platforms work.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>DWS · General Manager SA / NT / WA</strong><span class="when">2015 – 2022</span></div>
-            <p class="detail">P&amp;L, sales, delivery, and a national cloud and managed services centre of excellence. First full SA Government agency architecture into the cloud in 2015. Record regional contract value. Built Symplicit (human-centred design) in the region. One of the key senior managers during the acquisition of DWS Group by HCL Technologies.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>DWS · Business Development</strong><span class="when">2014 – 2015</span></div>
-            <p class="detail">New practices in cloud, infrastructure, and solution services. Lifted regional margins by more than 10% in the first year.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>TechnologyOne · Marketing &amp; Business Development</strong><span class="when">2010 – 2014</span></div>
-            <p class="detail">Public sector growth across SA and NT. Displaced legacy financials at the South Australian Financing Authority. New accounts including City of Playford, City of Unley, Arts SA, and the National Rail Safety Regulator. Largest single contract in the region at the time.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>Esri Australia · Sales &amp; account leadership</strong><span class="when">2005 – 2010</span></div>
-            <p class="detail">GIS across SA Government and new commercial accounts. First Australian sale of ArcGIS Image Server. First SA sale of Dekho.</p>
-          </button>
-          <button class="job" type="button">
-            <div class="job-top"><strong>EDS Australia · Business Analyst, then Client Services Manager</strong><span class="when">2002 – 2005</span></div>
-            <p class="detail">Started as a business analyst, promoted into client services leadership. Executive award for customer service.</p>
-          </button>
-        </div>
+      <section class="card panel reveal">
+        <h2 class="side-h accent">Interests</h2>
+        <ul class="pills" aria-label="Interests">
+          <li class="hot">leadership</li><li class="hot">coaching</li><li>technology</li><li>sales</li><li>mentoring</li><li>management</li><li>winning</li><li>business</li><li>customers</li><li>projects</li><li>travel</li><li>fitness</li><li>motorsport</li>
+        </ul>
       </section>
 
-      <section id="about" class="about">
-        <div>
-          <h2>About</h2>
-          <p style="color:var(--muted);max-width:38rem">Bachelor of Computer and Information Science (2002) and an MBA (2010), both UniSA. On the AIIA SA Council since 2009, events committee from 2013, elected to Council in 2018, now Chair of SA/NT. Earlier: SSSI Young Professionals national committee, and a stint as an SES rescue officer in metro Adelaide.</p>
-          <div class="values">
-            <span class="chip">Leadership</span>
-            <span class="chip">Public sector</span>
-            <span class="chip">Cloud &amp; platforms</span>
-            <span class="chip">Partnerships</span>
-            <span class="chip">Industry policy</span>
-            <span class="chip">AI Frontier</span>
-          </div>
-        </div>
-        <div class="card" style="cursor:default" onclick="event.stopPropagation()">
-          <p class="meta">Contact</p>
-          <h3>Find me on LinkedIn</h3>
-          <p>That’s the public door. Industry work sits with AIIA SA/NT.</p>
-          <div class="row">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn-ghost" href="https://aiia.com.au/state-councils/sa-council/" target="_blank" rel="noopener">AIIA SA Council</a>
-          </div>
-        </div>
+      <section class="card panel reveal">
+        <h2 class="side-h accent">Professional skills</h2>
+        <ul class="skills">
+          <li><span class="lbl">Marketing</span><span class="track"><span class="bar" style="width:98%"></span></span></li>
+          <li><span class="lbl">Technology Delivery</span><span class="track"><span class="bar" style="width:95%"></span></span></li>
+          <li><span class="lbl">Partnerships</span><span class="track"><span class="bar" style="width:100%"></span></span></li>
+          <li><span class="lbl">Org. Change</span><span class="track"><span class="bar" style="width:80%"></span></span></li>
+          <li><span class="lbl">Leadership</span><span class="track"><span class="bar" style="width:98%"></span></span></li>
+          <li><span class="lbl">Entrepreneurship</span><span class="track"><span class="bar" style="width:100%"></span></span></li>
+          <li><span class="lbl">Management</span><span class="track"><span class="bar" style="width:96%"></span></span></li>
+        </ul>
       </section>
-      <footer>
-        <span>Jason Dreimanis · Adelaide</span>
-      </footer>
-    </main>
+
+      <section class="card panel reveal">
+        <h2 class="side-h">Achievements</h2>
+        <ul class="ach">
+          <li>Built Global NZC business &gt; rest of the market</li>
+          <li>Founded Managed &amp; Cloud Service Practices</li>
+          <li>Largest single value contract sales in DWS, ERM</li>
+          <li>Whole-of-SA-Gov Contract @ Salesforce</li>
+        </ul>
+      </section>
+
+    </aside>
   </div>
 
-  <div class="drawer-back" id="back" hidden></div>
-  <aside class="drawer" id="drawer" aria-hidden="true">
-    <button class="close" type="button" id="close">Close</button>
-    <div id="panel"></div>
-  </aside>
+  <section id="education" class="edu reveal" aria-labelledby="h-edu">
+    <h2 class="sec" id="h-edu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11.500V16c0 1.500 2.200 3 5 3s5-1.500 5-3v-4.500"/></svg>Education</h2>
+    <div class="edu-grid">
+      <div>
+        <h3>Information Technology</h3>
+        <p>Bachelor of Computer and Information Science, 2002</p>
+        <p class="meta">University of South Australia</p>
+      </div>
+      <div>
+        <h3>Business</h3>
+        <p>Masters in Business Administration, 2010</p>
+        <p>Entrepreneurship and Innovation, 2021</p>
+        <p class="meta">University of South Australia</p>
+      </div>
+      <div>
+        <h3>Sales &amp; Coaching</h3>
+        <p>Various courses</p>
+        <p class="meta">2005 through present: Miller Heiman, Challenger Sales, C-Suite Sales, Vistage</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    const panels = {
-      ai: {
-        meta: "AIIA · 19 February 2026",
-        title: "South Australian AI Strategy",
-        body: "<p>Peak-body submission to the South Australian Government. AIIA argued for a living AI strategy: annual review, public reporting, procurement reform, skills through TAFE and universities, and industry sitting beside government rather than watching from the corridor.</p><p>Headline from the media release: AI as productivity infrastructure, not just an internal government tool. The aim is jobs, domestic capability, and trusted public services.</p>",
-        links: [
-          ["Read the submission", "https://aiia.com.au/wp-content/uploads/2026/02/South-Australian-AI-Strategy-Subsmission.pdf"],
-          ["Media release", "https://aiia.com.au/wp-content/uploads/2026/02/South-Australia-AI-Strategy-MR.pdf"],
-          ["All AIIA submissions", "https://aiia.com.au/influence-and-leadership/policy-submissions/"]
-        ]
-      },
-      sundowner: {
-        meta: "AIML · 12 September 2024",
-        title: "AI Is Here",
-        body: "<p>AIIA SA sundowner hosted at the Australian Institute for Machine Learning, Lot Fourteen. Opening address, then a panel on AI adoption for South Australian businesses, including AIML’s Industrial AI grant program.</p>",
-        links: [
-          ["AIML event write-up", "https://www.adelaide.edu.au/aiml/events/list/2024/09/australian-information-industry-association-aiia-sa-sundowner-ai-is-here"],
-          ["AIIA event page", "https://aiia.com.au/event/ai-adoption-for-business-sa-sundowner/"]
-        ]
-      },
-      council: {
-        meta: "AIIA SA/NT · Chair",
-        title: "State council",
-        body: "<p>The SA/NT Council is the local arm of Australia’s peak digital industry body. Work includes policy, events, and the iAwards program that puts South Australian and Territory innovation on a national stage.</p>",
-        links: [
-          ["SA Council", "https://aiia.com.au/state-councils/sa-council/"],
-          ["iAwards", "https://aiia.com.au/iawards/"]
-        ]
-      },
-      "tbz-ops": {
-        meta: "The Big Zero · webinar",
-        title: "Sustainability in operations",
-        body: "<p>While COO of The Big Zero, hosted a webinar on embedding sustainability into operations: systems, capital decisions, environmental certificates, and a Salesforce Net Zero Cloud walkthrough with Northmore Gordon.</p>",
-        links: [
-          ["Watch on YouTube", "https://youtu.be/v5usQ4VJPlI"]
-        ]
-      },
-      "tbz-scope3": {
-        meta: "The Big Zero · webinar",
-        title: "Emissions Unplugged: Cleaning up your value chain",
-        body: "<p>Hosted Scope 3 webinar with ERM and Salesforce. Value-chain emissions, data quality, supplier engagement, and how platforms support disclosures without living in spreadsheets.</p>",
-        links: [
-          ["Watch on YouTube", "https://youtu.be/Fd_spWJepVM"]
-        ]
-      }
-    };
+  <section class="find reveal" aria-labelledby="h-find">
+    <h2 class="find-h" id="h-find">Request my full CV</h2>
+    <p class="find-t">Full CV available on request. Message me on LinkedIn.</p>
+    <a class="cta" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">Message me on LinkedIn</a>
+  </section>
 
-    const drawer = document.getElementById("drawer");
-    const back = document.getElementById("back");
-    const panel = document.getElementById("panel");
+</main>
 
-    function openPanel(key) {
-      const p = panels[key];
-      if (!p) return;
-      panel.innerHTML = `<p class="meta">${p.meta}</p><h3>${p.title}</h3>${p.body}<div class="row">${p.links.map(([l,h]) => `<a class="btn btn-primary" href="${h}" target="_blank" rel="noopener">${l}</a>`).join("")}</div>`;
-      back.hidden = false;
-      requestAnimationFrame(() => { back.classList.add("show"); drawer.classList.add("show"); });
-      drawer.setAttribute("aria-hidden", "false");
-    }
-    function closePanel() {
-      back.classList.remove("show");
-      drawer.classList.remove("show");
-      drawer.setAttribute("aria-hidden", "true");
-      setTimeout(() => { back.hidden = true; }, 280);
-    }
-    document.querySelectorAll("[data-panel]").forEach(el => {
-      el.addEventListener("click", () => openPanel(el.dataset.panel));
-    });
-    document.getElementById("close").addEventListener("click", closePanel);
-    back.addEventListener("click", closePanel);
-    document.addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
+<footer class="foot">Jason Dreimanis &middot; Adelaide</footer>
 
-    document.querySelectorAll(".job").forEach(btn => {
-      btn.addEventListener("click", () => btn.classList.toggle("open"));
-    });
-
-    const links = [...document.querySelectorAll(".nav-links a[href^='#']")];
-    const secs = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
-      });
-    }, { rootMargin: "-40% 0px -50% 0px" });
-    secs.forEach(s => io.observe(s));
-  </script>
 </body>
 </html>
