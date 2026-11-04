@@ -22,6 +22,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <script>
+    /* Apply a saved theme before first paint to avoid a flash. No saved choice means follow the device. */
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Jason Dreimanis","url":"https://jdreimanis.github.io/","jobTitle":"Commercial Growth & Business Leader","address":{"@type":"PostalAddress","addressLocality":"Adelaide","addressRegion":"SA","addressCountry":"AU"},"sameAs":["https://www.linkedin.com/in/jasondreimanis"]}
@@ -40,6 +44,10 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
     </ul>
+    <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Dark mode" aria-pressed="false" hidden>
+      <svg class="ico i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.500A8 8 0 0 1 9.500 4a8 8 0 1 0 10.500 10.500z"/></svg>
+      <svg class="ico i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.500v2.500M12 19v2.500M2.500 12H5M19 12h2.500M5.200 5.200l1.800 1.800M17 17l1.800 1.800M18.800 5.200L17 7M7 17l-1.800 1.800"/></svg>
+    </button>
     <a class="pill-cta" href="https://www.linkedin.com/in/jasondreimanis" target="_blank" rel="noopener">Request my full CV</a>
   </div>
 </nav>
@@ -251,5 +259,23 @@
 
 <footer class="foot">Jason Dreimanis &middot; Adelaide</footer>
 
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    function saved() { try { var t = localStorage.getItem("theme"); return t === "light" || t === "dark" ? t : null; } catch (e) { return null; } }
+    function isDark() { var a = root.getAttribute("data-theme"); return a ? a === "dark" : mq.matches; }
+    function sync() { btn.setAttribute("aria-pressed", String(isDark())); }
+    btn.hidden = false; sync();
+    btn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      sync();
+    });
+    (mq.addEventListener ? mq.addEventListener.bind(mq, "change") : mq.addListener.bind(mq))(function () { if (!saved()) sync(); });
+  })();
+</script>
 </body>
 </html>

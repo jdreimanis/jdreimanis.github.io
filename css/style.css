@@ -25,8 +25,32 @@
   --head: "Archivo Narrow", "Franklin Gothic Medium Cond", "Arial Narrow", "Roboto Condensed", sans-serif;
   --body: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
 }
+/* Dark theme: explicit override via [data-theme="dark"], or the device setting when no override is saved. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --red-text: #ff6b6b;
+  --red-hover: #e00000;
+  --ink: #f2f2f2;
+  --text: #dcdcdc;
+  --muted: #a9a9a9;
+  --page: #141415;
+  --band: #232325;
+  --card: #1c1c1e;
+  --card-line: #2e2e31;
+  --rule: #5a5a5e;
+  --track: #4a2a2a;
+  --maroon: #7f4043;
+  --rose: #b97676;
+  --pill: #232326;
+  --pill-line: #3a3a3e;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  --shadow-hover: 0 2px 4px rgba(0,0,0,.5), 0 10px 26px rgba(0,0,0,.55);
+  --nav-bg: rgba(20,20,21,.88);
+  --bg-img-invert: 1;
+  --bg-img-opacity: .035;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --red-text: #ff6b6b;
     --red-hover: #e00000;
     --ink: #f2f2f2;
@@ -49,6 +73,7 @@
     --bg-img-opacity: .035;
   }
 }
+:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; background: var(--page); scroll-padding-top: 4.2rem; }
@@ -83,6 +108,14 @@ a:hover { text-decoration: underline; }
 .nav-links::-webkit-scrollbar { display: none; }
 .nav-links a { display: block; padding: .35rem .7rem; font-family: var(--head); text-transform: uppercase; letter-spacing: .06em; font-size: .9rem; color: var(--text); border-radius: 999px; white-space: nowrap; }
 .nav-links a:hover { background: var(--pill); color: var(--red-text); text-decoration: none; }
+.theme-toggle { margin-left: auto; display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; padding: 0; border-radius: 50%; border: 1px solid var(--card-line); background: transparent; color: var(--ink); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: var(--pill); color: var(--red-text); border-color: var(--red-text); }
+.theme-toggle .ico { width: 1.25rem; height: 1.25rem; }
+.theme-toggle .i-sun { display: none; }
+.theme-toggle[aria-pressed="true"] .i-sun { display: block; }
+.theme-toggle[aria-pressed="true"] .i-moon { display: none; }
+.nav-links + .theme-toggle { margin-left: .3rem; }
 .pill-cta { font-family: var(--head); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; font-size: .88rem; background: var(--red); color: #fff; padding: .4rem .95rem; border-radius: 999px; white-space: nowrap; transition: background .2s, transform .2s; }
 .pill-cta:hover { background: var(--red-hover); color: #fff; text-decoration: none; transform: translateY(-1px); }
 
@@ -159,7 +192,8 @@ h2.sec .ico { width: 1.35em; height: 1.35em; color: var(--red-text); }
 .ring-text { fill: #fff; font-family: var(--head); font-weight: 600; }
 .t-outer { font-size: 26px; }
 .t-inner { font-size: 19px; fill: #fbf1f1; }
-@media (prefers-color-scheme: dark) { .t-inner { fill: #2a1414; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .t-inner { fill: #2a1414; } }
+:root[data-theme="dark"] .t-inner { fill: #2a1414; }
 
 .pills { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
 .pills li { font-family: var(--head); font-size: .95rem; padding: .2rem .75rem; border-radius: 999px; background: var(--pill); border: 1px solid var(--pill-line); color: var(--text); }
@@ -197,11 +231,11 @@ h2.sec .ico { width: 1.35em; height: 1.35em; color: var(--red-text); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { animation: none !important; }
-  .card, .cta, .pill-cta, .links a { transition: none; }
+  .card, .cta, .pill-cta, .links a, .theme-toggle { transition: none; }
   .card:hover, .cta:hover, .pill-cta:hover { transform: none; }
 }
 
-@media (max-width: 720px) { .nav-links { display: none; } .pill-cta { margin-left: auto; } }
+@media (max-width: 720px) { .nav-links { display: none; } .nav-links + .theme-toggle { margin-left: auto; } }
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .band-inner { padding-top: 1.8rem; }
